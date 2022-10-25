@@ -2,11 +2,11 @@
 <br><br>
 **Contents**
 
-[ppt: Introduction to python](/Introduction%20to%20python.pptx)
+[ppt: Introduction to python](Introduction%20to%20python.pptx)
 
-[folder: python_example_codes](/python_example_codes/) contains python codes of snippets attached in slides.
+[folder: python_example_codes](python_example_codes) contains python codes of snippets attached in slides.
 
-[ipynb: ppt_snippet](/ppt_snippet.ipynb) contains python code for Linear Algebra in python.
+[ipynb: ppt_snippet](ppt_snippet.ipynb) contains python code for Linear Algebra in python.
 
 <br><br>
 **Power point references**
