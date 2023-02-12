@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# ANM Usage Examples in Python
+# ANM Usage Guide
 
 [Another Page](./another-page.html)
 
