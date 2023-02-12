@@ -4,9 +4,10 @@ layout: default
 
 # ANM Usage Guide
 
-[Another Page](./another-page.html)
 
-<table align="center" style ="font-size:2em;">
+## Table of Content
+
+<table align="center" style ="font-size:1.6em;">
     <tr>
         <th style="text-align: center">code1</th>
         <th style="text-align: center">code2</th>
@@ -18,23 +19,114 @@ layout: default
     </tr>
     <tr>
         <td style="text-align: center"><a href="#bisect">bisect</a></td>
+        <td style="text-align: center"><a href="#Cubic_LS">Cubic_LS</a></td>
+        <td style="text-align: center"><a href="#Cholesky">Cholesky</a></td>
+        <td style="text-align: center"><a href="#fixed_pt_sys">fixed_pt_sys</a></td>
+        <td style="text-align: center"><a href="#Gauss_quad">Gauss_quad</a></td>
+        <td style="text-align: center"><a href="#Euler_sys">Euler_sys</a></td>
+        <td style="text-align: center"><a href="#example1_f">example1_f</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#bisect2">bisect2</a></td>
+        <td style="text-align: center"><a href="#Gauss_Newton">Gauss_Newton</a></td>
+        <td style="text-align: center"><a href="#GaussNaive">GaussNaive</a></td>
+        <td style="text-align: center"><a href="#GaussSeidel">GaussSeidel</a></td>
+        <td style="text-align: center"><a href="#quadadapt">quadadapt</a></td>
+        <td style="text-align: center"><a href="#eulode">eulode</a></td>
+        <td style="text-align: center"><a href="#example2_f">example2_f</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#false_position">false_position</a></td>
+        <td style="text-align: center"><a href="#Lagrange_coef">Lagrange_coef</a></td>
+        <td style="text-align: center"><a href="#GaussPivot">GaussPivot</a></td>
+        <td style="text-align: center"><a href="#InvPower">InvPower</a></td>
+        <td style="text-align: center"><a href="#romberg">romberg</a></td>
+        <td style="text-align: center"><a href="#example2_e">example2_e</a></td>
+        <td style="text-align: center"><a href="#linear_FD">linear_FD</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#multiple1">multiple1</a></td>
+        <td style="text-align: center"><a href="#Lagrange_Eval">Lagrange_Eval</a></td>
+        <td style="text-align: center"><a href="#LU_factor">LU_factor</a></td>
+        <td style="text-align: center"><a href="#LU_Solve_Gen">LU_Solve_Gen</a></td>
+        <td style="text-align: center"><a href="#Simp">Simp</a></td>
+        <td style="text-align: center"><a href="#example2_f">example2_f</a></td>
+        <td style="text-align: center"><a href="#shoot_secant">shoot_secant</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#multiple2">multiple2</a></td>
+        <td style="text-align: center"><a href="#Linear_LS">Linear_LS</a></td>
+        <td style="text-align: center"><a href="#LU_pivot">LU_pivot</a></td>
+        <td style="text-align: center"><a href="#Newton_sys">Newton_sys</a></td>
+        <td style="text-align: center"><a href="#trap1">trap1</a></td>
+        <td style="text-align: center"><a href="#example3">example3</a></td>
+        <td></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#newtraph">newtraph</a></td>
+        <td style="text-align: center"><a href="#linregr">linregr</a></td>
+        <td style="text-align: center"><a href="#LU_Solve">LU_Solve</a></td>
+        <td style="text-align: center"><a href="#Power_eig">Power_eig</a></td>
+        <td style="text-align: center"><a href="#trapuneq">trapuneq</a></td>
+        <td style="text-align: center"><a href="#example5">example5</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: center"><a href="#Multiple_Linear">Multiple_Linear</a></td>
+        <td style="text-align: center"><a href="#Tridiag">Tridiag</a></td>
+        <td style="text-align: center"><a href="#SOR">SOR</a></td>
+        <td></td>
+        <td style="text-align: center"><a href="#Heun_iter">Heun_iter</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: center"><a href="#Newtint2">Newtint2</a></td>
+        <td style="text-align: center"><a href="#Truss">Truss</a></td>
+        <td></td>
+        <td></td>
+        <td style="text-align: center"><a href="#Midpoint">Midpoint</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: center"><a href="#quadratic">quadratic</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="text-align: center"><a href="#RK4">RK4</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: center"><a href="#Quadratic_LS">Quadratic_LS</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="text-align: center"><a href="#RK4_sys">RK4_sys</a></td>
+        <td></td>
     </tr>
 </table>
+
+## Instructions of `anm`
+- Download and move `anm.py` to package path or workspace
+- create a new Python file `*.py` or Ipython Notebook `*.ipynb` in workspace
+- start programing by importing `anm` and essential packages
+```python
+import anm
+import numpy as np
+import matplotlib.pyplot as plt
+```
+- Check the docstring for basic instructions
+- Open docstring by placing your cursor on `anm` or anm modules such as `anm.linregr` and click `Shift` + `Tab`
+- Get list of modules by placing your cursor to the end of `anm.` and click `Tab`
+
+## [Additional Resources](./another-page.html)
+
+<p><img src="https://img.shields.io/badge/Made%20with-Markdown-1f45f.svg" alt="mardown" /> <img src="https://img.shields.io/badge/Made%20with-Python-blue?&logo=Python" alt="python" />  </p>
+
+# ANM Guide
 
 
 ```python
@@ -43,6 +135,8 @@ import anm
 import numpy as np
 import matplotlib.pyplot as plt
 ```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
 
 ---
 ## bisect
@@ -59,6 +153,8 @@ print('xr: {}\nf(xr): {}\nea: {}\niter: {}'.format(root, fx, ea, iter))
     ea: 5.0423329059115807e-05
     iter: 22
     
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
 
 ## bisect2
 
@@ -96,6 +192,8 @@ print('\nxr: {}\nf(xr): {}'.format(xr, f_xr))
     f(xr): 2.4255414928120445e-05
     
 
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
 ## false_position
 
 
@@ -128,6 +226,8 @@ print('\nxr: {}\nf(xr): {}'.format(xr, f_xr))
     xr: 0.4727788398539938
     f(xr): -0.00024522776512281297
     
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
 
 ## multiple1
 
@@ -162,6 +262,8 @@ print('\nxr: {}\nf(xr): {}'.format(xr, f_xr))
     f(xr): 3.9842684262936245e-08
     
 
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
 ## multiple2
 
 
@@ -191,6 +293,8 @@ print('\nxr: {}\nf(xr): {}'.format(xr, f_xr))
     f(xr): -4.9840465088379915e-11
     
 
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
 ## newtraph
 
 
@@ -206,6 +310,8 @@ print('root: {}\nea: {}\niter: {}'.format(root, ea, iter))
     iter: 7
     
 
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
 ---
 ## Cubic_LS
 
@@ -219,7 +325,7 @@ print('coef_: {}\nStandard Error: {}\ncorr: {}'.format(z, Syx, r))
 
 
     
-![png](output_16_0.png)
+![png](output_17_0.png)
     
 
 
@@ -238,6 +344,19 @@ print('coef_: {}\nStandard Error: {}\ncorr: {}'.format(z, Syx, r))
     TypeError: cannot unpack non-iterable NoneType object
 
 
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Gauss_Newton
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Lagrange_coef
+
 
 ```python
 # Lagrange coefficient
@@ -252,6 +371,10 @@ print('coef_: {}'.format(c))
      -6.35168651e-02  1.00473986e-02]
     
 
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Lagrange_Eval
+
 
 ```python
 # Lagrange Evaluation
@@ -265,6 +388,10 @@ print('f(t): {}'.format(p))
 
     f(t): [5.9361875]
     
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Linear_LS
 
 
 ```python
@@ -300,13 +427,17 @@ print('coef_: {}\ncorr: {}'.format([a1, a0], r))
 
 
     
-![png](output_19_1.png)
+![png](output_25_1.png)
     
 
 
     coef_: [45.0, -59.0]
     corr: 0.9626907371412557
     
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## linregr
 
 
 ```python
@@ -323,9 +454,31 @@ print('coef_: {}\ncorr: {}'.format([a0, a1], r2))
 
 
     
-![png](output_20_1.png)
+![png](output_27_1.png)
     
 
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Multiple_Linear
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Newtint2
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## quadratic
 
 
 ```python
@@ -350,6 +503,10 @@ print('A: {}\nb: {}'.format(A, b))
      [ 0  0  1  0  0  0  0  0  0  0  0  0]]
     b: [-5, 9, 4, -6, -2, 21, 19, 39, 0, 0, 0, 0]
     
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Quadratic_LS
 
 
 ```python
@@ -385,7 +542,7 @@ print('coef_: {}\nSyx: {}\ncorr:{}'.format(z, Syx, r))
 
 
     
-![png](output_22_1.png)
+![png](output_35_1.png)
     
 
 
@@ -393,3 +550,325 @@ print('coef_: {}\nSyx: {}\ncorr:{}'.format(z, Syx, r))
     Syx: 2.6933640544107207e-14
     corr:1.0
     
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+---
+## Cholesky
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## GaussNaive
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## GaussPivot
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## LU_factor
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## LU_pivot
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## LU_Solve
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Tridiag
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Truss
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+---
+## fixed_pt_sys
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## GaussSeidel
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## InvPower
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## LU_Solve_Gen
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Newton_sys
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Power_eig
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## SOR
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+---
+## Gauss_quad
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## quadadapt
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## romberg
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Simp
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## trap1
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## trapuneq
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+---
+## Euler_sys
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## eulode
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## example2_e
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## example2_f
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## example3
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## example5
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Heun_iter
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## Midpoint
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## RK4
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## RK4_sys
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+---
+## example1_f
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## example2_f
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## linear_FD
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
+
+## shoot_secant
+
+
+```python
+
+```
+
+<p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
