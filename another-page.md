@@ -4,7 +4,7 @@ layout: default
 
 # Additional Resources
 <br>
-<p style ="font-size:1.7em;">
+<p style ="font-size:1.4em;">
     - 🌐: <a href="https://wiki.python.org/moin/BeginnersGuide">Beginner’s Guide to Python</a><br><br>
     - 🌐: <a href="https://hmanikantan.github.io/ECH60/">Numerical Methods using Python - ECH60</a><br><br>
     - 🌐: <a href="https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html">Python Programming And Numerical Methods - A Guide For Engineers And Scientists</a><br><br>

@@ -4,10 +4,9 @@ layout: default
 
 # ANM Usage Guide
 
+## [Additional Resources](./another-page.html)
 
-## Table of Content
-
-<table align="center" style ="font-size:1.6em;">
+<table align="center" style ="font-size:1.1em;">
     <tr>
         <th style="text-align: center">code1</th>
         <th style="text-align: center">code2</th>
@@ -19,45 +18,45 @@ layout: default
     </tr>
     <tr>
         <td style="text-align: center"><a href="#bisect">bisect</a></td>
-        <td style="text-align: center"><a href="#Cubic_LS">Cubic_LS</a></td>
-        <td style="text-align: center"><a href="#Cholesky">Cholesky</a></td>
+        <td style="text-align: center"><a href="#cubic_ls">Cubic_LS</a></td>
+        <td style="text-align: center"><a href="#cholesky">Cholesky</a></td>
         <td style="text-align: center"><a href="#fixed_pt_sys">fixed_pt_sys</a></td>
-        <td style="text-align: center"><a href="#Gauss_quad">Gauss_quad</a></td>
-        <td style="text-align: center"><a href="#Euler_sys">Euler_sys</a></td>
+        <td style="text-align: center"><a href="#gauss_quad">Gauss_quad</a></td>
+        <td style="text-align: center"><a href="#euler_sys">Euler_sys</a></td>
         <td style="text-align: center"><a href="#example1_f">example1_f</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#bisect2">bisect2</a></td>
-        <td style="text-align: center"><a href="#Gauss_Newton">Gauss_Newton</a></td>
-        <td style="text-align: center"><a href="#GaussNaive">GaussNaive</a></td>
-        <td style="text-align: center"><a href="#GaussSeidel">GaussSeidel</a></td>
+        <td style="text-align: center"><a href="#gauss_newton">Gauss_Newton</a></td>
+        <td style="text-align: center"><a href="#gaussnaive">GaussNaive</a></td>
+        <td style="text-align: center"><a href="#gaussseidel">GaussSeidel</a></td>
         <td style="text-align: center"><a href="#quadadapt">quadadapt</a></td>
         <td style="text-align: center"><a href="#eulode">eulode</a></td>
         <td style="text-align: center"><a href="#example2_f">example2_f</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#false_position">false_position</a></td>
-        <td style="text-align: center"><a href="#Lagrange_coef">Lagrange_coef</a></td>
-        <td style="text-align: center"><a href="#GaussPivot">GaussPivot</a></td>
-        <td style="text-align: center"><a href="#InvPower">InvPower</a></td>
+        <td style="text-align: center"><a href="#lagrange_coef">Lagrange_coef</a></td>
+        <td style="text-align: center"><a href="#gausspivot">GaussPivot</a></td>
+        <td style="text-align: center"><a href="#invpower">InvPower</a></td>
         <td style="text-align: center"><a href="#romberg">romberg</a></td>
         <td style="text-align: center"><a href="#example2_e">example2_e</a></td>
-        <td style="text-align: center"><a href="#linear_FD">linear_FD</a></td>
+        <td style="text-align: center"><a href="#linear_fd">linear_FD</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#multiple1">multiple1</a></td>
-        <td style="text-align: center"><a href="#Lagrange_Eval">Lagrange_Eval</a></td>
-        <td style="text-align: center"><a href="#LU_factor">LU_factor</a></td>
-        <td style="text-align: center"><a href="#LU_Solve_Gen">LU_Solve_Gen</a></td>
-        <td style="text-align: center"><a href="#Simp">Simp</a></td>
+        <td style="text-align: center"><a href="#lagrange_eval">Lagrange_Eval</a></td>
+        <td style="text-align: center"><a href="#lu_factor">LU_factor</a></td>
+        <td style="text-align: center"><a href="#lu_solve_gen">LU_Solve_Gen</a></td>
+        <td style="text-align: center"><a href="#simp">Simp</a></td>
         <td style="text-align: center"><a href="#example2_f">example2_f</a></td>
         <td style="text-align: center"><a href="#shoot_secant">shoot_secant</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="#multiple2">multiple2</a></td>
-        <td style="text-align: center"><a href="#Linear_LS">Linear_LS</a></td>
-        <td style="text-align: center"><a href="#LU_pivot">LU_pivot</a></td>
-        <td style="text-align: center"><a href="#Newton_sys">Newton_sys</a></td>
+        <td style="text-align: center"><a href="#linear_ls">Linear_LS</a></td>
+        <td style="text-align: center"><a href="#lu_pivot">LU_pivot</a></td>
+        <td style="text-align: center"><a href="#newton_sys">Newton_sys</a></td>
         <td style="text-align: center"><a href="#trap1">trap1</a></td>
         <td style="text-align: center"><a href="#example3">example3</a></td>
         <td></td>
@@ -65,28 +64,28 @@ layout: default
     <tr>
         <td style="text-align: center"><a href="#newtraph">newtraph</a></td>
         <td style="text-align: center"><a href="#linregr">linregr</a></td>
-        <td style="text-align: center"><a href="#LU_Solve">LU_Solve</a></td>
-        <td style="text-align: center"><a href="#Power_eig">Power_eig</a></td>
+        <td style="text-align: center"><a href="#lu_solve">LU_Solve</a></td>
+        <td style="text-align: center"><a href="#power_eig">Power_eig</a></td>
         <td style="text-align: center"><a href="#trapuneq">trapuneq</a></td>
         <td style="text-align: center"><a href="#example5">example5</a></td>
         <td></td>
     </tr>
     <tr>
         <td></td>
-        <td style="text-align: center"><a href="#Multiple_Linear">Multiple_Linear</a></td>
-        <td style="text-align: center"><a href="#Tridiag">Tridiag</a></td>
-        <td style="text-align: center"><a href="#SOR">SOR</a></td>
+        <td style="text-align: center"><a href="#multiple_linear">Multiple_Linear</a></td>
+        <td style="text-align: center"><a href="#tridiag">Tridiag</a></td>
+        <td style="text-align: center"><a href="#sor">SOR</a></td>
         <td></td>
-        <td style="text-align: center"><a href="#Heun_iter">Heun_iter</a></td>
+        <td style="text-align: center"><a href="#heun_iter">Heun_iter</a></td>
         <td></td>
     </tr>
     <tr>
         <td></td>
-        <td style="text-align: center"><a href="#Newtint2">Newtint2</a></td>
-        <td style="text-align: center"><a href="#Truss">Truss</a></td>
+        <td style="text-align: center"><a href="#newtint2">Newtint2</a></td>
+        <td style="text-align: center"><a href="#truss">Truss</a></td>
         <td></td>
         <td></td>
-        <td style="text-align: center"><a href="#Midpoint">Midpoint</a></td>
+        <td style="text-align: center"><a href="#midpoint">Midpoint</a></td>
         <td></td>
     </tr>
     <tr>
@@ -95,16 +94,16 @@ layout: default
         <td></td>
         <td></td>
         <td></td>
-        <td style="text-align: center"><a href="#RK4">RK4</a></td>
+        <td style="text-align: center"><a href="#rk4">RK4</a></td>
         <td></td>
     </tr>
     <tr>
         <td></td>
-        <td style="text-align: center"><a href="#Quadratic_LS">Quadratic_LS</a></td>
+        <td style="text-align: center"><a href="#quadratic_ls">Quadratic_LS</a></td>
         <td></td>
         <td></td>
         <td></td>
-        <td style="text-align: center"><a href="#RK4_sys">RK4_sys</a></td>
+        <td style="text-align: center"><a href="#rk4_sys">RK4_sys</a></td>
         <td></td>
     </tr>
 </table>
@@ -121,8 +120,6 @@ import matplotlib.pyplot as plt
 - Check the docstring for basic instructions
 - Open docstring by placing your cursor on `anm` or anm modules such as `anm.linregr` and click `Shift` + `Tab`
 - Get list of modules by placing your cursor to the end of `anm.` and click `Tab`
-
-## [Additional Resources](./another-page.html)
 
 <p><img src="https://img.shields.io/badge/Made%20with-Markdown-1f45f.svg" alt="mardown" /> <img src="https://img.shields.io/badge/Made%20with-Python-blue?&logo=Python" alt="python" />  </p>
 
