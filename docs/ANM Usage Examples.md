@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # The 'anm' Usage Examples
 
 <table align="center" style ="font-size:2em;">
