@@ -20,6 +20,7 @@
 - Finish conversion of Gauss_Newton, Multiple_Linear, Newint2
 - Improve the output print
 - Deadline to fininsh this project: 30 Novemeber
+- Add hyperlinks to matlab files in below table
 
 ## Bashboard:
 <!--⌛ ❌ ✔-->
@@ -43,14 +44,14 @@
 |quadratic.m        |✔|✔|✔|
 |Quadratic_LS.m     |✔|✔|✔|
 |||||
-|Cholesky.m         |  |  |  |
-|GaussNaive.m       |  |  |  |
-|GaussPivot.m       |  |  |  |
-|LU_factor.m        |  |  |  |
-|LU_pivot.m         |  |  |  |
-|LU_Solve.m         |  |  |  |
-|Tridiag.m          |  |  |  |
-|Truss.m            |  |  |  |
+|Cholesky.m         |❌|  |  |
+|GaussNaive.m       |⌛|  |  |
+|GaussPivot.m       |⌛|  |  |
+|LU_factor.m        |⌛|  |  |
+|LU_pivot.m         |⌛|  |  |
+|LU_Solve.m         |⌛|  |  |
+|Tridiag.m          |⌛|  |  |
+|Truss.m            |⌛|  |  |
 |||||
 |fixed_pt_sys.m     |  |  |  |
 |GaussSeidel.m      |  |  |  |
