@@ -1,4 +1,4 @@
-remote_theme: pages-themes/leap-day@v0.2.0
+remote_theme: pages-themes/primer@v0.2.0
 title: Advanced Numerical Methods in python
 #description: [A short description of your site's purpose]
 show_downloads: false
