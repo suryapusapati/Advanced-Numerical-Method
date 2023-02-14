@@ -1,4 +1,4 @@
-remote_theme: pages-themes/hacker@v0.2.0 # /primer@v0.6.0
+remote_theme: pages-themes/primer@v0.6.0 # /hacker@v0.2.0
 title: Advanced Numerical Methods (ANM) in Python
 #description: [A short description of your site's purpose]
 show_downloads: false
