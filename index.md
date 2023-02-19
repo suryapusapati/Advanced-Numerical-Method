@@ -5,8 +5,8 @@ layout: default
 # ANM Usage Guide
 
 <p align="left">
-    <a href="./another-page.html"><img height="50" src="https://img.shields.io/badge/-Additional%20Resources-blue?style=flat&logoColor=white" alt="another-page" /></a>
-    <a href="https://github.com/suryapusapati/Advanced-Numerical-Method/"><img height="50" src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" alt="github" /></a>
+    <a href="./another-page.html"><img height="45" src="https://img.shields.io/badge/-Additional%20Resources-blue?style=flat&logoColor=white" alt="another-page" /></a>
+    <a href="https://github.com/suryapusapati/Advanced-Numerical-Method/"><img height="45" src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" alt="github" /></a>
 </p>
 
 <table align="center" style ="font-size:1.2em;">
