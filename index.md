@@ -4,10 +4,10 @@ layout: default
 
 # ANM Usage Guide
 
-## [Additional Resources](./another-page.html)
-
-
-[![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/suryapusapati/Advanced-Numerical-Method/)
+<p align="left">
+    <a href="./another-page.html"><img height="50" src="https://img.shields.io/badge/-Additional%20Resources-blue?style=flat&logoColor=white" alt="another-page" /></a>
+    <a href="https://github.com/suryapusapati/Advanced-Numerical-Method/"><img height="50" src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" alt="github" /></a>
+</p>
 
 <table align="center" style ="font-size:1.2em;">
     <tr>
@@ -114,21 +114,21 @@ layout: default
 ## Instructions of `anm`
 - Download and move `anm.py` to package path or workspace
 - create a new Python file `*.py` or Ipython Notebook `*.ipynb` in workspace
-- start programing by importing `anm` and essential packages
+- start programing by importing `anm` and essential packages, as shown below:
 ```python
 import anm
 import numpy as np
 import matplotlib.pyplot as plt
 ```
 - Check the docstring for basic instructions
-- Open docstring by placing your cursor on `anm` or anm modules such as `anm.linregr` and click `Shift` + `Tab`
-- Get list of modules by placing your cursor to the end of `anm.` and click `Tab`
+- Open docstring by placing your cursor on `anm` or anm modules such as `anm.linregr` and press `Shift` + `Tab`
+- Get list of modules by placing your cursor to the end of `anm.` and press `Tab`
 
-<p>
-    <img src="https://img.shields.io/badge/Made%20with-Markdown-1f45f.svg" alt="mardown" />
-    <img src="https://img.shields.io/badge/Made%20with-Python-blue?&logo=Python" alt="python" />
-    <img src="https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=Jupyter" alt="python" />
-    <img src="https://img.shields.io/badge/Made%20with-GitHub%20pages-blueviolet?logo=GitHub" alt="github-pages" />
+<p align="center">
+    <img  height="23" src="https://img.shields.io/badge/Made%20with-Markdown-1f45f.svg" alt="mardown" />
+    <img  height="23" src="https://img.shields.io/badge/Made%20with-Python-blue?&logo=Python" alt="python" />
+    <img  height="23" src="https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=Jupyter" alt="python" />
+    <img  height="23" src="https://img.shields.io/badge/Made%20with-GitHub%20pages-blueviolet?logo=GitHub" alt="github-pages" />
 </p>
 
 
@@ -699,17 +699,26 @@ L @ U # dot product
 
 ```python
 # Naive Gauss elimination
-# solving equations: 5x + 3y = 7, 3x - 5y = -23
-A = np.array([[5, 3],
-              [3, -5]])
-b = np.array([7, -23])
+# solving equations:
+# x1 + 2*x3 + 3*x4 = 1
+# -x1 + 2*x2 + 2*x3 - 3*x4 = -1
+# x2 + x3 + 4*x4 = 2
+# 6*x1 + 2*x2 + 2*x3 + 4*x4 = 1
+A = np.array([[1, 0, 2, 3],
+              [-1, 2, 2, -3],
+              [0, 1, 1, 4],
+              [6, 2, 2, 4]])
+b = np.array([1, -1, 2, 1])
 x = anm.GaussNaive(A, b)
-print(f'x = {x[0]:f} \ny = {x[1]:f}')
+x
 ```
 
-    x = -1.000000 
-    y = 4.000000
-    
+
+
+
+    array([-0.18571429,  0.22857143, -0.11428571,  0.47142857])
+
+
 
 <p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
 
@@ -718,17 +727,26 @@ print(f'x = {x[0]:f} \ny = {x[1]:f}')
 
 ```python
 # Gauss elimination with pivoting
-# solving equations: 5x + 3y = 7, 3x - 5y = -23
-A = np.array([[5, 3],
-              [3, -5]])
-b = np.array([7, -23])
+# solving equations:
+# x1 + 2*x3 + 3*x4 = 1
+# -x1 + 2*x2 + 2*x3 - 3*x4 = -1
+# x2 + x3 + 4*x4 = 2
+# 6*x1 + 2*x2 + 2*x3 + 4*x4 = 1
+A = np.array([[1, 0, 2, 3],
+              [-1, 2, 2, -3],
+              [0, 1, 1, 4],
+              [6, 2, 2, 4]])
+b = np.array([1, -1, 2, 1])
 x = anm.GaussPivot(A, b)
-print(f'x = {x[0]:f} \ny = {x[1]:f}')
+x
 ```
 
-    x = -1.300000 
-    y = 4.500000
-    
+
+
+
+    array([-0.18571429,  0.22857143, -0.11428571,  0.47142857])
+
+
 
 <p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
 
@@ -806,9 +824,28 @@ print('A :\n',A,'\n\nL :\n',L,'\n\nU :\n',U,'\n\nP :\n',P,'\n\nL*U :\n',L@U,'\n\
 
 
 ```python
-#
-# x = anm.LU_Solve(L, U, P)
+# Function to solve the equation LUx=b
+# solving equations:
+# x1 + 2*x3 + 3*x4 = 1
+# -x1 + 2*x2 + 2*x3 - 3*x4 = -1
+# x2 + x3 + 4*x4 = 2
+# 6*x1 + 2*x2 + 2*x3 + 4*x4 = 1
+A = np.array([[1, 0, 2, 3],
+              [-1, 2, 2, -3],
+              [0, 1, 1, 4],
+              [6, 2, 2, 4]])
+b = np.array([1, -1, 2, 1])
+L, U = anm.LU_factor(A)
+x = anm.LU_Solve(L, U, b)
+x
 ```
+
+
+
+
+    array([-0.18571429,  0.22857143, -0.11428571,  0.47142857])
+
+
 
 <p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
 
@@ -1074,35 +1111,34 @@ print(f'\nz :{z.T}\nm : {float(m):.8f}\nerror : {error:.8f}')
 # Successive Over Relaxation (SOR)
 A = np.array([[4, -1, -1],
               [6, 8, 0],
-              [-5, 0, 12]], dtype = float)
-b = np.array([-2, 45, 80], dtype = float)
-x0 = np.array([0, 0, 0], dtype = float)
-w = 1.2
-anm.SOR(A, b, x0 = x0, w = w, tol = 1e-6, max_it = 100)
+              [-5, 0, 12]], dtype=float)
+b = np.array([-2, 45, 80])
+x0 = np.array([0, 0, 0], dtype=float)
+anm.SOR(A, b, x0, w = 1.2, tol = 1e-6, max_it = 100)
 ```
 
-    iter	x0		x1		x2		
-    1	-0.60000000	7.83000000	7.10000000
-    2	1.40450000	2.65590000	8.68675000
-    3	0.38616000	5.52373200	6.84189000
-    4	0.83551680	4.14132336	7.88489720
-    5	0.64258486	4.76508257	7.38689786
-    6	0.72493520	4.49210013	7.61002323
-    7	0.68983030	4.60988543	7.51274081
-    8	0.70479083	4.55939941	7.55463809
-    9	0.69841555	4.58097212	7.53669571
-    10	0.70113228	4.57176747	7.54435928
-    11	0.69997459	4.57569224	7.54109003
-    12	0.70046792	4.57401930	7.54248387
-    13	0.70025770	4.57473229	7.54188977
-    14	0.70034728	4.57442844	7.54214297
-    15	0.70030911	4.57455792	7.54203507
-    16	0.70032537	4.57450274	7.54208105
-    17	0.70031844	4.57452626	7.54206145
-    18	0.70032140	4.57451624	7.54206980
-    19	0.70032014	4.57452051	7.54206624
-    20	0.70032067	4.57451869	7.54206776
-    21	0.70032044	4.57451946	7.54206711
+    iter	x[0]		x[1]		x[2]
+    1	-0.60000000	7.29000000	7.70000000
+    2	4.01700000	1.67670000	8.46850000
+    3	1.64016000	4.93851600	7.12638000
+    4	2.69143680	3.34000368	7.92044240
+    5	2.23984646	4.06613745	7.53583475
+    6	2.43262237	3.74741238	7.70914423
+    7	2.35044251	3.88511926	7.63339241
+    8	2.38546500	3.82605765	7.66605402
+    9	2.37054050	3.85130202	7.65205945
+    10	2.37690034	3.84052929	7.65803828
+    11	2.37419020	3.84512296	7.65548745
+    12	2.37534508	3.84316484	7.65657505
+    13	2.37485295	3.84399938	7.65611146
+    14	2.37506266	3.84364373	7.65630904
+    15	2.37497330	3.84379529	7.65622484
+    16	2.37501138	3.84373070	7.65626072
+    17	2.37499515	3.84375822	7.65624543
+    18	2.37500207	3.84374650	7.65625195
+    19	2.37499912	3.84375149	7.65624917
+    20	2.37500038	3.84374936	7.65625035
+    21	2.37499984	3.84375027	7.65624985
     
     SOR method converged
     
@@ -1111,7 +1147,7 @@ anm.SOR(A, b, x0 = x0, w = w, tol = 1e-6, max_it = 100)
 
 
 
-    array([0.70032054, 4.57451913, 7.54206739])
+    array([2.37500007, 3.84374988, 7.65625006])
 
 
 
@@ -1131,7 +1167,19 @@ anm.Gauss_quad(f = example1 , a = 0, b = np.pi, k = 2)
 
 
 
-    -8.00265438638611
+    -8.687766227719367
+
+
+
+
+```python
+anm.Gauss_quad(f = example1 , a = 0, b = np.pi, k = 5)
+```
+
+
+
+
+    -4.9333450976919435
 
 
 
@@ -1391,7 +1439,7 @@ plt.show()
 
 
     
-![png](output_91_0.png)
+![png](output_92_0.png)
     
 
 
@@ -1487,7 +1535,7 @@ anm.example5(y = [0.2, 0.3])
 
 ```python
 # Alternative
-def example5(y):
+def example5(t, y):
     f1 = -0.5 * y[0]
     f2 = 4 - 0.1 * y[0] - 0.3 * y[1]
     return np.array([f1, f2], dtype=float)
@@ -1592,7 +1640,7 @@ plt.show()
 
 
     
-![png](output_109_0.png)
+![png](output_110_0.png)
     
 
 
@@ -1644,7 +1692,7 @@ plt.show()
 
 
     
-![png](output_112_0.png)
+![png](output_113_0.png)
     
 
 
@@ -1655,41 +1703,36 @@ plt.show()
 
 ```python
 # 4th-order Runge-Kutta Method for ODEs
-t, y =anm.RK4_sys(anm.example5, tspan = [0, 10], y0 = [4, 6], h = 0.5)
+def example5(t, y):
+    f1 = -0.5 * y[0]
+    f2 = 4 - 0.1 * y[0] - 0.3 * y[1]
+    return np.array([f1, f2], dtype=float)
+t, y =anm.RK4_sys(example5, tspan = [0, 10], y0 = [4, 6], h = 0.5)
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    Input In [2], in <cell line: 2>()
-          1 # 4th-order Runge-Kutta Method for ODEs
-    ----> 2 t, y =anm.RK4_sys(anm.example5, tspan = [0, 10], y0 = [4, 6], h = 0.5)
+    t	y[0]		y[1]
+    0.0	4.00000000	6.00000000
+    0.5	3.11523438	6.85767031
+    1.0	2.42617130	7.63210567
+    1.5	1.88952306	8.32688598
+    2.0	1.47157680	8.94686510
+    2.5	1.14607666	9.49760136
+    3.0	0.89257435	9.98495402
+    3.5	0.69514457	10.41480356
+    4.0	0.54138457	10.79286351
+    4.5	0.42163495	11.12455943
+    5.0	0.32837293	11.41495670
+    5.5	0.25573966	11.66872321
+    6.0	0.19917224	11.89011655
+    6.5	0.15511705	12.08298814
+    7.0	0.12080649	12.25079844
+    7.5	0.09408514	12.39663922
+    8.0	0.07327431	12.52325988
+    8.5	0.05706666	12.63309556
+    9.0	0.04444401	12.72829579
+    9.5	0.03461338	12.81075234
+    10.0	0.02695719	12.88212596
     
-
-    File ~\Desktop\pusapatiraju1997\family\3 p.s.n.raju\1. Career\4.Masters\ENGG 818 Advanced Numerical Methods - Python Code\anm.py:2041, in RK4_sys(f, tspan, y0, h)
-       2039 y = np.zeros((n, len(y0)))
-       2040 y[0, :] = y0
-    -> 2041 k1 = np.array(f([a, y0])).reshape(len(y0), 1)
-       2042 for i in range(n-1):
-       2043     k2 = np.array(f([t[i]+h/2, y[i,:]+k1/2*h])).reshape(len(y0), 1)
-    
-
-    File ~\Desktop\pusapatiraju1997\family\3 p.s.n.raju\1. Career\4.Masters\ENGG 818 Advanced Numerical Methods - Python Code\anm.py:1883, in example5(y)
-       1876 '''
-       1877 example5:
-       1878     compute: [(-0.5 * y[0]), (4 - 0.1 * y[0] - 0.3 * y[1])]
-       1879 
-       1880 -
-       1881 '''
-       1882 f1 = -0.5 * y[0]
-    -> 1883 f2 = 4 - 0.1 * y[0] - 0.3 * y[1]
-       1884 return np.array([f1, f2], dtype=float)
-    
-
-    TypeError: can't multiply sequence by non-int of type 'float'
-
 
 <p style="text-align:right; font-size:1.8em;"><a href="#">⏏️</a></p>
 
@@ -1793,7 +1836,7 @@ x, y = anm.linear_FD()
 
 
     
-![png](output_122_1.png)
+![png](output_123_1.png)
     
 
 
